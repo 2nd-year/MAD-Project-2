@@ -1,3 +1,16 @@
 <resources>
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
     <string name="app_name">MAD-Project</string>
+    <string name="signInHeader">Sign in</string>
+    <string name="signInHeader2">Fill your Username and Password to Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="or_sign_in_with">Or Sign in with</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="i_dont_have_an_account">Dont have an account? Sign up</string>
 </resources>
