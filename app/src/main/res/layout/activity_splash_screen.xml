@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/background"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/google_login"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="250dp"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:layout_marginEnd="30dp"-->
+<!--            android:contentDescription="@string/sign_in_with_google"-->
+<!--            android:src="@drawable/frock_splash" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:fontFamily="@font/poppins_family"-->
+<!--            android:text="@string/fashionhub"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="30sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/description"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/poppins_family"-->
+<!--            android:text="@string/the_largest_online_fashion_store"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="#A0A0A0"-->
+<!--            android:textSize="15sp" />-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/madeInSrilanka"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/made_in_sri_lanka"-->
+<!--        android:textColor="#A0A0A0"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:fontFamily="@font/poppins_family"-->
+<!--        tools:ignore="SmallSp" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="10dp"-->
+<!--        android:src="@drawable/flag"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/madeInSrilanka" />-->
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/splash_screen"
+    android:scaleType="centerCrop"
+    android:contentDescription="@string/splashscreen" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
