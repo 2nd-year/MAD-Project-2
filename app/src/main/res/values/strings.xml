@@ -29,7 +29,7 @@
     <string name="made_in_sri_lanka">Made in Sri Lanka</string>
     <string name="splashscreen">SplashScreen</string>
     <string name="good_morning" tools:ignore="TypographyEllipsis">Good Morning...</string>
-    <string name="imagesun">ImageSun</string>
+    <string name="logout">Logout</string>
     <string name="footer_home">Home</string>
     <string name="footer_account">Account</string>
     <string name="footer_offer">Offer</string>
