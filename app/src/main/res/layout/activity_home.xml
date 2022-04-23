@@ -10,18 +10,17 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="75dp"
         android:background="@android:color/transparent"
         android:padding="18dp"
         tools:ignore="UselessParent">
 
         <TextView
-            android:id="@+id/Greetingtext"
+            android:id="@+id/GreetingText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="43dp"
             android:fontFamily="@font/poppins_family"
             android:text="@string/good_morning"
             android:textColor="@color/btn_color"
@@ -29,14 +28,27 @@
             android:textStyle="bold"
             tools:ignore="RelativeOverlap,TextContrastCheck" />
 
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="27dp"
+            android:fontFamily="@font/poppins_family"
+            android:textColor="@color/btn_color"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap,SmallSp,TextContrastCheck" />
+
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="80dp"
+            android:id="@+id/logout"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/btn_color"
-            android:contentDescription="@string/imagesun"
-            android:src="@drawable/ic_baseline_wb_sunny_24"
+            android:contentDescription="@string/logout"
+            android:src="@drawable/logout"
             tools:ignore="ImageContrastCheck" />
 
     </RelativeLayout>
