@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity{
 
     private void SecondActivity() {
         finish();;
-        Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+        Intent intent = new Intent(getApplicationContext(), Home.class);
         startActivity(intent);
     }
 
