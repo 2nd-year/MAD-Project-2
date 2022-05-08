@@ -82,7 +82,7 @@ public class Register extends AppCompatActivity {
                         data.put("password", passwordTxt);
 
                         // adding the data to the database
-                        FirebaseDatabase.getInstance().getReference().child("fashionHubDB").child("Users").child(replaceEmail).push().setValue(data);
+                        FirebaseDatabase.getInstance().getReference().child("fashionHubDB").child("Users").child(replaceEmail).setValue(data);
                         Toast.makeText(getApplicationContext(), "User added successfully", Toast.LENGTH_SHORT).show();
 
                         // changing the view to login after inserting data
