@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity_add_card">
+
+
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:padding="18dp"
+            tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/GreetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_family"
+            android:text="@string/payment_details"
+            android:textColor="@color/btn_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins_family"
+            android:text="@string/payment_details"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap,TextContrastCheck" />
+
+    </RelativeLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="20dp"
+            app:fabCradleVerticalOffset="10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:background="@color/background"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_color"
+            android:contentDescription="@string/floating_icon"
+            android:src="@drawable/ic_round_home_24"
+            app:layout_anchor="@id/bottomAppBar"
+            app:tint="@color/white"
+            tools:ignore="ImageContrastCheck" />
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="38dp"
+            android:text="@string/customize_payment_method"
+            android:textColor="@color/btn_color"
+            android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/view_payment_details"
+        android:padding="100dp"
+        android:textColorHint="@color/Payment_list"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="215dp"
+            android:textColor="@color/black"
+            android:text="Card Payment"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="375dp"
+        android:text="Other Methods"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="255dp"
+        android:text="Update"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView10delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="295dp"
+        android:text="Delete"
+        android:textStyle="bold"
+        android:textColor="#CB453E"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="100dp"
+        android:text="Credit/Debit Card"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/add_card_round_button"
+            android:text="@string/add_another_credit_debit"
+
+        />
+
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+           <![CDATA[
+
+
+
+
+
+         android:text="TextView"
+
+         />
+
+
+
+
+    ]]>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
