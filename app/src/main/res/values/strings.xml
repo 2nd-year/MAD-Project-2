@@ -110,4 +110,8 @@
     <string name="women_fashion">Women Fashion</string>
     <string name="baby_fashion">Baby Fashion</string>
     <string name="accessories">Accessories</string>
+    <string name="my_account">My Account</string>
+    <string name="your_account_details_are_here">Your Account Details are Here</string>
+    <string name="update_details">Update Details</string>
+    <string name="to_home">To Home</string>
 </resources>
