@@ -20,49 +20,21 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class SecondActivity extends AppCompatActivity {
-
-    TextView name, mail;
-    Button logout;
-
-    GoogleSignInOptions gso;
-    GoogleSignInClient gsc;
+    Button Next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        name = findViewById(R.id.name);
-        mail = findViewById(R.id.mail);
-        logout = findViewById(R.id.logout);
+        Next = findViewById(R.id.next);
 
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(this, gso);
-
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-
-        if (account != null){
-            String Name = account.getDisplayName();
-            String Email = account.getEmail();
-
-            name.setText(Name);
-            mail.setText(Email);
-        }
-
-        logout.setOnClickListener(new View.OnClickListener() {
+        Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SignOut();
-            }
-        });
-    }
-
-    private void SignOut() {
-        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
                 finish();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
     }

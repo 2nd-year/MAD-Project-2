@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:background="@color/background"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:queryHint="Search"
+            android:iconifiedByDefault="false"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/search_background"
+            android:queryBackground="@android:color/transparent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_family"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/popular_brands"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:scrollbars="horizontal"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/levis_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/brand_logo"
+                android:src="@drawable/levis_logo"/>
+
+            <ImageView
+                android:id="@+id/boss_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/brand_logo"
+                android:src="@drawable/boss_logo"/>
+
+            <ImageView
+                android:id="@+id/emerald_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/brand_logo"
+                android:src="@drawable/emerald_logo"/>
+
+            <ImageView
+                android:id="@+id/colombia_logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/brand_logo"
+                android:src="@drawable/colombia_logo1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/new_arrivals"
+            android:fontFamily="@font/poppins_family"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/newArrival1"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="21dp"
+                android:background="@color/white"
+                android:contentDescription="@string/new_arrivals" />
+
+            <ImageView
+                android:id="@+id/newArrival2"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="21dp"
+                android:background="@color/white"
+                android:contentDescription="@string/new_arrivals" />
+
+            <ImageView
+                android:id="@+id/newArrival3"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:background="@color/white"
+                android:contentDescription="@string/new_arrivals" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_offers"
+            android:fontFamily="@font/poppins_family"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/latestOffer1"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="21dp"
+                android:background="@color/white"
+                android:contentDescription="@string/new_arrivals" />
+
+            <ImageView
+                android:id="@+id/latestOffer2"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_marginEnd="21dp"
+                android:background="@color/white"
+                android:contentDescription="@string/new_arrivals" />
+
+            <ImageView
+                android:id="@+id/latestOffer3"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:background="@color/white"
+                android:contentDescription="@string/new_arrivals" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
