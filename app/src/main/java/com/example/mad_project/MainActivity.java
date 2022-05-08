@@ -13,6 +13,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.installations.FirebaseInstallations;
 
 
@@ -51,29 +55,77 @@ public class MainActivity extends AppCompatActivity{
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
 
-        googleLoginButton.setOnClickListener(view -> SignIn());
+        googleLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SignIn();
+            }
+        });
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Validate((username.getText().toString()), (password.getText().toString()));
+                // checking whether the fields are empty
+                if((username.getText().toString().isEmpty()) && (password.getText().toString().isEmpty())){
+                    errorMsg.setText("* Fill Username and Password");
+                } else if((username.getText().toString().isEmpty()) && !(password.getText().toString().isEmpty())){
+                    errorMsg.setText("* Fill Username");
+                } else if(!(username.getText().toString().isEmpty()) && (password.getText().toString().isEmpty())){
+                    errorMsg.setText("* Fill Password");
+                } else {
+                    Validate((username.getText().toString()).replace(".", ","), (password.getText().toString()));
+                }
             }
         });
     }
 
     private void Validate(String userName , String userPassword) {
-        if((userName.equals("Admin")) && (userPassword.equals("1234"))){
-            Intent intent = new Intent(getApplicationContext(), Home.class);
-            intent.putExtra("Username", userName);
-            intent.putExtra("Password", userPassword);
-            startActivity(intent);
-        } else if((userName.equals("Admin")) && !(userPassword.equals("1234"))){
-            errorMsg.setText("* Invalid Password");
-        } else if(!(userName.equals("Admin")) && (userPassword.equals("1234"))){
-            errorMsg.setText("* Invalid Username");
-        } else {
-            errorMsg.setText("* Invalid Username or Password");
-        }
+        FirebaseDatabase.getInstance().getReference().child("fashionHubDB").child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                // checking is there a username in the database that u entered
+                if(snapshot.hasChild(userName)){
+                    String getUserPassword = snapshot.child(userName).child("password").getValue().toString();
+                    String UserFirstName = snapshot.child(userName).child("firstname").getValue().toString();
+                    String UserLastName = snapshot.child(userName).child("lastname").getValue().toString();
+
+                    // checking the password with the username
+                    if(getUserPassword.equals(userPassword)){
+//                        Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), Home.class);
+                        intent.putExtra("firstName", UserFirstName);
+                        intent.putExtra("lastName", UserLastName);
+                        intent.putExtra("userName", userName);
+                        startActivity(intent);
+
+                    } else {
+                        errorMsg.setText("* Invalid Password");
+                    }
+                }
+                else {
+                    errorMsg.setText("* Invalid Username");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(MainActivity.this, "Database Error" + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+//        if((userName.equals("Admin")) && (userPassword.equals("1234"))){
+//            Intent intent = new Intent(getApplicationContext(), Home.class);
+//            intent.putExtra("Username", userName);
+//            intent.putExtra("Password", userPassword);
+//            startActivity(intent);
+//        } else if((userName.equals("Admin")) && !(userPassword.equals("1234"))){
+//            errorMsg.setText("* Invalid Password");
+//        } else if(!(userName.equals("Admin")) && (userPassword.equals("1234"))){
+//            errorMsg.setText("* Invalid Username");
+//        } else {
+//            errorMsg.setText("* Invalid Username or Password");
+//        }
     }
 
     private void SignIn() {
@@ -89,14 +141,15 @@ public class MainActivity extends AppCompatActivity{
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 task.getResult(ApiException.class);
-                SecondActivity();
+                HomeActivity();
             } catch (ApiException e) {
-                Toast.makeText(this, "Login Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Login Error - Check Your Internet Connection", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private void SecondActivity() {
+    private void HomeActivity() {
+        Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
         finish();
         Intent intent = new Intent(getApplicationContext(), Home.class);
         startActivity(intent);
