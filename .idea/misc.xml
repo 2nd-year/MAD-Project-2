@@ -3,7 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_home.xml" value="0.18020833333333333" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/fully_round_button.xml" value="0.2495" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2325" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/ic_baseline_local_offer_24.xml" value="0.234" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.2325" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/ic_outline_shopping_cart_24.xml" value="0.2325" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/round_button.xml" value="0.23" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/search_background.xml" value="0.1885" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/second_intent_upper_corner.xml" value="0.195" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/drawable/second_intent_uppercorner.xml" value="0.23" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout-large/activity_home.xml" value="0.195703125" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout-large/fragment_menu.xml" value="0.17530435364115685" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout-large/fragment_offers.xml" value="0.12021857923497267" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout-normal/activity_home.xml" value="0.2609375" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout-small/activity_home.xml" value="0.2609375" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout-xlarge/activity_home.xml" value="0.195703125" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/about_us_fragment.xml" value="0.21973684210526315" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_about_us.xml" value="0.15219298245614035" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_home.xml" value="0.16695652727729227" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_main.xml" value="0.1911231884057971" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_offers.xml" value="0.15175438596491228" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_register.xml" value="0.21238937336105165" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_second.xml" value="0.18690264855772545" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/activity_splash_screen.xml" value="0.21973684210526315" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/fragment_home.xml" value="0.18365218000502148" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/fragment_menu.xml" value="0.15175438596491228" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/fragment_more.xml" value="0.1897644927536232" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/layout/fragment_offer.xml" value="0.15942028985507245" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1885" />
+        <entry key="..\:/Android Studio Solutions/FashionHub/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1885" />
         <entry key="..\:/Android Studio Solutions/MAD-Project/app/src/main/res/drawable/footer_navigation.xml" value="0.1" />
         <entry key="..\:/Android Studio Solutions/MAD-Project/app/src/main/res/drawable/ic_baseline_wb_sunny_24.xml" value="0.1" />
         <entry key="..\:/Android Studio Solutions/MAD-Project/app/src/main/res/drawable/ic_round_home_24.xml" value="0.2885" />
