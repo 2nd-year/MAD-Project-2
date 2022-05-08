@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "610054838704",
-    "project_id": "mad-project-15103",
-    "storage_bucket": "mad-project-15103.appspot.com"
+    "project_number": "388635444565",
+    "firebase_url": "https://mad-project-b73e6-default-rtdb.firebaseio.com",
+    "project_id": "mad-project-b73e6",
+    "storage_bucket": "mad-project-b73e6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:610054838704:android:c90c6548c782ba2e65de75",
+        "mobilesdk_app_id": "1:388635444565:android:52e123c015d267244f1bdc",
         "android_client_info": {
           "package_name": "com.example.mad_project"
         }
       },
       "oauth_client": [
         {
-          "client_id": "610054838704-qrdsl4b529g0cpk2n8ocoj2vhctr96il.apps.googleusercontent.com",
+          "client_id": "388635444565-gvg5djiv8ac37koa3t5mobca9a9ptkgr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mad_project",
+            "certificate_hash": "318f2d913aa41a1b44978250872eedf5f070bcc7"
+          }
+        },
+        {
+          "client_id": "388635444565-csda51osngr8a1t884ott6859fcols53.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDaRaHEO26PivqMURbbc5y_Q_KkwE-PR5I"
+          "current_key": "AIzaSyDpKE9Fz23PexqBM9_j049AJ52_k5Vio60"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "610054838704-qrdsl4b529g0cpk2n8ocoj2vhctr96il.apps.googleusercontent.com",
+              "client_id": "388635444565-csda51osngr8a1t884ott6859fcols53.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

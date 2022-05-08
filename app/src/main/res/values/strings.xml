@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">MAD-Project</string>
+    <string name="app_name">FashionHub</string>
     <string name="signInHeader">Sign in</string>
     <string name="signInHeader2">Fill your Username and Password to Login</string>
     <string name="username">Username</string>
@@ -9,7 +9,7 @@
     <string name="or_sign_in_with">Or Sign in with</string>
     <string name="sign_in_with_facebook">Sign in with Facebook</string>
     <string name="sign_in_with_google">Sign in with Google</string>
-    <string name="i_dont_have_an_account">Dont have an account? Sign up</string>
+    <string name="i_dont_have_an_account">Dont have an account?</string>
     <string name="enter_your_email_to_send_the_reset_link">Enter Your Email to Send the Reset Link</string>
     <string name="email">Email</string>
     <string name="send_reset_link">Send Reset Link</string>
@@ -24,11 +24,11 @@
     <string name="telephone">Telephone</string>
     <string name="address">Address</string>
     <string name="already_have_an_account_sign_in">Already Have an Account? Sign in</string>//
-    <string name="fashionhub">Fashion Hub</string>
+    <string name="fashionHub">Fashion Hub</string>
     <string name="the_largest_online_fashion_store">The Largest Online Fashion Store</string>
     <string name="made_in_sri_lanka">Made in Sri Lanka</string>
     <string name="splashscreen">SplashScreen</string>
-    <string name="good_morning" tools:ignore="TypographyEllipsis">Good Morning...</string>
+    <string name="welcome" tools:ignore="TypographyEllipsis">Welcome...</string>
     <string name="logout">Logout</string>
     <string name="footer_home">Home</string>
     <string name="footer_account">Account</string>
@@ -90,6 +90,28 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="sign_out">Sign out</string>
     <string name="popular_brands">Popular Brands</string>
-    <string name="brand_logo1">Brand Logo1</string>
+    <string name="brand_logo">Brand Logo</string>
     <string name="new_arrivals">New Arrivals</string>
+    <string name="testData">TestData</string>
+    <string name="latest_offers">Latest Offers</string>
+    <string name="desc">Fashion Hub, online fashion store is an android application which provides an extensive fashion designs platform that helps to shop owners and customers to deliver their chosen fashion by online</string>
+    <string name="my_cart">My Cart</string>
+    <string name="notifications">Notifications</string>
+    <string name="more_options_for_user">More Options for User</string>
+    <string name="small_description_about_fashionHub_dr_dev">Small description about fashionhub (Dr. Dev)</string>
+    <string name="back">Back</string>
+    <string name="who_we_are">Who We Are</string>
+    <string name="aboutUsDesc">Dr. Dev is a second-year second semester group project. We do this application for Mobile Application Development Project. We started facilitating door-todoor delivery, but we see this as just the beginning of connectiong people with possibilities. (This is only a Prop)</string>
+    <string name="made">Made in Sri Lanka 🇱🇰</string>
+    <string name="next">Next</string>
+    <string name="stay_safe_stay_happy">Stay Safe ! Stay Happy !</string>
+    <string name="mensFashion">mensFashion</string>
+    <string name="mens_fashion">Mens Fashion</string>
+    <string name="women_fashion">Women Fashion</string>
+    <string name="baby_fashion">Baby Fashion</string>
+    <string name="accessories">Accessories</string>
+    <string name="my_account">My Account</string>
+    <string name="your_account_details_are_here">Your Account Details are Here</string>
+    <string name="update_details">Update Details</string>
+    <string name="to_home">To Home</string>
 </resources>

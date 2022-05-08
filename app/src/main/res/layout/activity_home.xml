@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/coordinator"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +10,12 @@
     tools:ignore="MissingClass">
 
     <RelativeLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:background="@android:color/transparent"
-        android:padding="18dp"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
         tools:ignore="UselessParent">
 
         <TextView
@@ -22,7 +25,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_family"
-            android:text="@string/good_morning"
+            android:text="@string/welcome"
             android:textColor="@color/btn_color"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -33,9 +36,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="30dp"
             android:layout_marginTop="27dp"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins_family"
+            android:text="@string/testData"
             android:textColor="@color/btn_color"
             android:textSize="10sp"
             android:textStyle="bold"
@@ -78,114 +82,17 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/btn_color"
         android:contentDescription="@string/floating_icon"
-        android:src="@drawable/ic_round_home_24"
+        android:src="@drawable/ic_baseline_account_circle_24"
         app:layout_anchor="@id/bottomAppBar"
         app:tint="@color/white"
-        tools:ignore="ImageContrastCheck" />
+        tools:ignore="ImageContrastCheck"/>
 
     <LinearLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:orientation="vertical">
-
-        <SearchView
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:queryHint="Search"
-            android:iconifiedByDefault="false"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/search_background"
-            android:queryBackground="@android:color/transparent"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_family"
-            android:textColor="@color/white"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="@string/popular_brands"/>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:scrollbars="horizontal"
-            android:layout_marginEnd="20dp"
-            >
-
-            <ImageView
-                android:id="@+id/levis_logo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginEnd="24dp"
-                android:contentDescription="@string/brand_logo1"
-                android:src="@drawable/levis_logo"/>
-
-            <ImageView
-                android:id="@+id/boss_logo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginEnd="24dp"
-                android:contentDescription="@string/brand_logo1"
-                android:src="@drawable/boss_logo"/>
-
-            <ImageView
-                android:id="@+id/emerald_logo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginEnd="24dp"
-                android:contentDescription="@string/brand_logo1"
-                android:src="@drawable/boss_logo"/>
-
-            <ImageView
-                android:id="@+id/colombia_logo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:contentDescription="@string/brand_logo1"
-                android:src="@drawable/colombia_logo"/>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/new_arrivals"
-            android:fontFamily="@font/poppins_family"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:id="@+id/newArrivalsItem"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:contentDescription="@string/brand_logo1"
-                android:src="@drawable/colombia_logo"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_marginTop="90dp"
+        android:orientation="vertical"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
