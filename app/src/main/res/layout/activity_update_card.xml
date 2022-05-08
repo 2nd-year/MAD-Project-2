@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity_add_card">
+
+
+    <TextView
+        android:id="@+id/addpayment"
+        android:layout_width="match_parent"
+        android:layout_height="592dp"
+        android:layout_marginTop="82dp"
+        android:background="@drawable/payment_rounded_list" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@android:color/transparent"
+            android:padding="18dp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/GreetingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/poppins_family"
+                android:text="@string/payment_details"
+                android:textColor="@color/btn_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap,TextContrastCheck" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="20dp"
+            app:fabCradleVerticalOffset="10dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:background="@color/background"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_color"
+            android:contentDescription="@string/floating_icon"
+            android:src="@drawable/ic_round_home_24"
+            app:layout_anchor="@id/bottomAppBar"
+            app:tint="@color/white"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="38dp"
+            android:text="@string/customize_payment_method"
+            android:textColor="@color/btn_color"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/updatecardName"
+            android:layout_width="match_parent"
+            android:layout_height="592dp"
+            android:layout_marginTop="82dp"
+            android:background="@drawable/payment_rounded_list" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="match_parent"
+            android:layout_height="592dp"
+            android:layout_marginTop="82dp"
+            android:background="@drawable/payment_rounded_list" />
+
+        <EditText
+            android:id="@+id/YYInput2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginEnd="190dp"
+            android:background="@drawable/input_payment_details"
+            android:hint="YY"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Payment_list" />
+
+        <EditText
+            android:id="@+id/MMInput2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginEnd="300dp"
+            android:background="@drawable/input_payment_details"
+            android:hint="MM"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Payment_list" />
+
+        <EditText
+            android:id="@+id/cardNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_payment_details"
+            android:hint="Card Number"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Payment_list" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="100dp"
+            android:text="Update Payment Details "
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/cardname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="302dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_payment_details"
+            android:hint="Card Name"
+            android:padding="12dp"
+            android:textColorHint="@color/Payment_list" />
+
+        <EditText
+            android:id="@+id/cardNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/input_payment_details"
+            android:hint="Card Name"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Payment_list" />
+
+        <EditText
+            android:id="@+id/CVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="492dp"
+            android:layout_marginEnd="300dp"
+            android:background="@drawable/input_payment_details"
+            android:hint="@string/CVV"
+            android:padding="12dp"
+            android:textColorHint="@color/Payment_list" />
+
+
+        <EditText
+            android:id="@+id/CVVInput2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginEnd="300dp"
+            android:background="@drawable/input_payment_details"
+            android:hint="CVV"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Payment_list" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="175dp"
+            android:text="@string/card_no"
+            android:textSize="15dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="280dp"
+            android:text="@string/card_name"
+            android:textSize="15dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="375dp"
+            android:text="Expire Date"
+            android:textSize="15dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="470dp"
+            android:text="@string/CVV"
+            android:textSize="15dp"
+            android:textStyle="bold"
+
+
+            />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="575dp"
+            android:background="@drawable/add_card_round_button"
+
+            android:text="Save Card"
+
+            />
+
+    </RelativeLayout>
+
+
+    />
+
+        <![CDATA[
+
+
+
+         android:text="TextView"
+
+         />
+
+
+
+    ]]>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

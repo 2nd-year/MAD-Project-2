@@ -50,6 +50,7 @@
     <string name="card_name">Card Name</string>
     <string name="expiry_date">Card Name</string>
     <string name="mm">MM</string>
+    <string name="Mm">MM</string>
     <string name="yy">YY</string>
     <string name="CVV">CVV</string>
     <string name="add_card">Add Card</string>
