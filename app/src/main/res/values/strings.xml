@@ -114,4 +114,6 @@
     <string name="your_account_details_are_here">Your Account Details are Here</string>
     <string name="update_details">Update Details</string>
     <string name="to_home">To Home</string>
+    <string name="delete_my_account">Delete Account</string>
+    <string name="update">Update</string>
 </resources>
