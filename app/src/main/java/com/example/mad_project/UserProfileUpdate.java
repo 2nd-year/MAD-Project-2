@@ -1,49 +1,45 @@
 package com.example.mad_project;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class UserProfile extends AppCompatActivity {
-    Button HomeButton, AccountDelete, UpdateDetails;
+import java.util.HashMap;
+
+public class UserProfileUpdate extends AppCompatActivity {
+    Button HomeButton, update;
     String firstname, lastname, email, EMAIL;
-    TextView FirstName, LastName, Email, Telephone, Address, Password;
+    TextView FirstName, LastName, Email, Telephone, Address;
     String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_user_profile_update);
 
         HomeButton = findViewById(R.id.home);
-        FirstName = findViewById(R.id.firstName1);
-        LastName = findViewById(R.id.lastName1);
-        Email = findViewById(R.id.email1);
-        Telephone = findViewById(R.id.telephone1);
-        Address = findViewById(R.id.address1);
-        Password = findViewById(R.id.password1);
-        AccountDelete = findViewById(R.id.delete);
-        UpdateDetails = findViewById(R.id.updateDetails);
+        FirstName = findViewById(R.id.firstNameU);
+        LastName = findViewById(R.id.lastNameU);
+        Email = findViewById(R.id.emailU);
+        Telephone = findViewById(R.id.telephoneU);
+        Address = findViewById(R.id.addressU);
+        update = findViewById(R.id.update);
 
         Bundle extras = getIntent().getExtras();
-        String user = extras.getString("user");
+        String user = extras.getString("email");
 
         username = user;
 
@@ -66,36 +62,50 @@ public class UserProfile extends AppCompatActivity {
                     Email.setText(UserEmail);
                     Telephone.setText(UserTelephone);
                     Address.setText(UserAddress);
-                    Password.setText(UserPassword);
+
+                    email = UserEmail.replace(".", ",");
+
+                    update.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                            String NewFirstName = FirstName.getText().toString();
+                            String NewLastName = LastName.getText().toString();
+                            String NewAddress = Address.getText().toString();
+                            String NewTelephone = Telephone.getText().toString();
+
+                            HashMap<String, Object> data = new HashMap<>();
+                            data.put("firstname", NewFirstName);
+                            data.put("lastname", NewLastName);
+                            data.put("telephone", NewTelephone);
+                            data.put("address", NewAddress);
+                            data.put("password", UserPassword);
+
+                            FirebaseDatabase.getInstance().getReference().child("fashionHubDB").child("Users").child(email).setValue(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Toast.makeText(UserProfileUpdate.this, "Update Complete", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), UserProfile.class);
+                                    intent.putExtra("user", email);
+                                    startActivity(intent);
+                                }
+                            });
+                        }
+                    });
 
                     firstname = UserFirstName;
                     lastname = UserLastName;
-                    email = UserEmail.replace(".", ",");
+
                     EMAIL = email;
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(UserProfile.this, "Database Error" + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(UserProfileUpdate.this, "Database Error" + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
-        AccountDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DeleteRecord(EMAIL);
-            }
-        });
-
-        UpdateDetails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), UserProfileUpdate.class);
-                intent.putExtra("email", EMAIL);
-                startActivity(intent);
-            }
-        });
 
         HomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,20 +117,5 @@ public class UserProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-    }
-    private void DeleteRecord(String emailAddress){
-       FirebaseDatabase.getInstance().getReference().child("fashionHubDB").child("Users").child(emailAddress).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
-           @Override
-           public void onSuccess(Void unused) {
-               Toast.makeText(getApplicationContext(), "Account Removed Successfully", Toast.LENGTH_SHORT).show();
-               startActivity(new Intent(getApplicationContext(), MainActivity.class));
-           }
-       }).addOnFailureListener(new OnFailureListener() {
-           @Override
-           public void onFailure(@NonNull Exception e) {
-               Toast.makeText(getApplicationContext(), "Error in Removing the Account" + e.getMessage(), Toast.LENGTH_SHORT).show();
-           }
-       });
     }
 }
