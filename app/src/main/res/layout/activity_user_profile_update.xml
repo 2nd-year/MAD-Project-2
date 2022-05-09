@@ -77,8 +77,8 @@
 
         </RelativeLayout>
 
-    <TextView
-        android:id="@+id/firstName1"
+    <EditText
+        android:id="@+id/firstNameU"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/edit_text_background"
@@ -96,8 +96,8 @@
         android:textColor="@color/black"
         tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/lastName1"
+        <EditText
+            android:id="@+id/lastNameU"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/edit_text_background"
@@ -115,8 +115,8 @@
             android:textColor="@color/black"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/email1"
+        <EditText
+            android:id="@+id/emailU"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/edit_text_background"
@@ -132,10 +132,11 @@
             android:layout_marginEnd="20dp"
             android:textColorHint="@color/divider"
             android:textColor="@color/black"
+            android:editable="false"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/telephone1"
+        <EditText
+            android:id="@+id/telephoneU"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/edit_text_background"
@@ -153,8 +154,8 @@
             android:textColor="@color/black"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/address1"
+        <EditText
+            android:id="@+id/addressU"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/edit_text_background"
@@ -172,52 +173,27 @@
             android:textColor="@color/black"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/password1"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/edit_text_background"
-            android:hint="@string/password"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:textSize="18sp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/poppins_family"
-            android:textColorHint="@color/divider"
-            android:textColor="@color/black"
-            tools:ignore="MissingConstraints,RtlSymmetry" />
 
         <Button
-            android:id="@+id/updateDetails"
+            android:id="@+id/update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/round_button"
             android:layout_marginTop="30dp"
-            android:text="@string/update_details"
+            android:text="@string/update"
             android:fontFamily="@font/poppins_family"
             android:textColor="@color/white"
             android:textAllCaps="false"
             android:textStyle="bold"
             android:textSize="15sp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:orientation="horizontal">
-
         <Button
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:background="@drawable/fully_round_button"
             android:text="@string/to_home"
@@ -226,16 +202,6 @@
             app:tint="@color/white"
             tools:ignore="ImageContrastCheck,RelativeOverlap" />
 
-            <Button
-                android:id="@+id/delete"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginStart="10dp"
-                android:text="@string/delete_my_account"
-                android:drawableRight="@drawable/ic_round_delete_24"
-                android:background="@drawable/fully_round_button"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
