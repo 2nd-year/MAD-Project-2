@@ -11,15 +11,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class UserProfile extends AppCompatActivity {
-    Button HomeButton;
-    String firstname, lastname, email;
+    Button HomeButton, AccountDelete, UpdateDetails;
+    String firstname, lastname, email, EMAIL;
     TextView FirstName, LastName, Email, Telephone, Address, Password;
     String username;
 
@@ -35,6 +39,8 @@ public class UserProfile extends AppCompatActivity {
         Telephone = findViewById(R.id.telephone1);
         Address = findViewById(R.id.address1);
         Password = findViewById(R.id.password1);
+        AccountDelete = findViewById(R.id.delete);
+        UpdateDetails = findViewById(R.id.updateDetails);
 
         Bundle extras = getIntent().getExtras();
         String user = extras.getString("user");
@@ -65,12 +71,29 @@ public class UserProfile extends AppCompatActivity {
                     firstname = UserFirstName;
                     lastname = UserLastName;
                     email = UserEmail.replace(".", ",");
+                    EMAIL = email;
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(UserProfile.this, "Database Error" + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        AccountDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DeleteRecord(EMAIL);
+            }
+        });
+
+        UpdateDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), UserProfileUpdate.class);
+                intent.putExtra("email", EMAIL);
+                startActivity(intent);
             }
         });
 
@@ -84,5 +107,20 @@ public class UserProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+    private void DeleteRecord(String emailAddress){
+       FirebaseDatabase.getInstance().getReference().child("fashionHubDB").child("Users").child(emailAddress).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+           @Override
+           public void onSuccess(Void unused) {
+               Toast.makeText(getApplicationContext(), "Account Removed Successfully", Toast.LENGTH_SHORT).show();
+               startActivity(new Intent(getApplicationContext(), MainActivity.class));
+           }
+       }).addOnFailureListener(new OnFailureListener() {
+           @Override
+           public void onFailure(@NonNull Exception e) {
+               Toast.makeText(getApplicationContext(), "Error in Removing the Account" + e.getMessage(), Toast.LENGTH_SHORT).show();
+           }
+       });
     }
 }
