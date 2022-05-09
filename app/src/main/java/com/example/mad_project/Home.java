@@ -44,11 +44,6 @@ public class Home<placeholder> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Bundle extras = getIntent().getExtras();
-        first_name = extras.getString("firstName");
-        last_name = extras.getString("lastName");
-        user_name = extras.getString("userName");
-
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, new HomeFragment(), "HomeFragment").commit();
 
@@ -73,6 +68,10 @@ public class Home<placeholder> extends AppCompatActivity {
             username.setText("Hello " + Name);
             UserName = Name;
         } else {
+            Bundle extras = getIntent().getExtras();
+            first_name = extras.getString("firstName");
+            last_name = extras.getString("lastName");
+            user_name = extras.getString("userName");
 
             username.setText("Hello " + first_name + " " + last_name);
             UserName = first_name + " " + last_name;
